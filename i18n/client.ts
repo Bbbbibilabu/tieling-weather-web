@@ -6,7 +6,13 @@ import { changeLanguage } from '@/i18n/i18next-config'
 
 // same logic as server
 export const getLocaleOnClient = (): Locale => {
-  return Cookies.get(LOCALE_COOKIE_NAME) as Locale || i18n.defaultLocale
+  const locale = Cookies.get(LOCALE_COOKIE_NAME)
+
+  if (locale && i18n.locales.includes(locale as Locale)) {
+    return locale as Locale
+  }
+
+  return i18n.defaultLocale
 }
 
 export const setLocaleOnClient = (locale: Locale, notReload?: boolean) => {

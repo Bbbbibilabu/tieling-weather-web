@@ -7,7 +7,7 @@ export const APP_INFO: AppInfo = {
   description: '铁岭市气象业务智能助手',
   copyright: '铁岭气象',
   privacy_policy: '',
-  default_language: 'en-US',
+  default_language: 'en',
   disable_session_same_site: false, // set it to true if you want to embed the chatbot in an iframe
 }
 

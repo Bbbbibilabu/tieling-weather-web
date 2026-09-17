@@ -13,11 +13,14 @@ export const getLocaleOnServer = async (): Promise<Locale> => {
   let languages: string[] | undefined
   // get locale from cookie
   const localeCookie = (await cookies()).get('locale')
-  languages = localeCookie?.value === 'zh-Hans'
-  ? ['zh']
-  : localeCookie?.value === 'en'
-  ? ['en']
-  : []
+
+if (localeCookie?.value === 'zh-Hans') {
+  languages = ['zh-Hans']
+} else if (localeCookie?.value === 'en') {
+  languages = ['en']
+} else {
+  languages = []
+}
 
   if (!languages.length) {
     // Negotiator expects plain object so we need to transform headers

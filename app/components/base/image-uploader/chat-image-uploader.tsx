@@ -137,7 +137,7 @@ const ChatImageUploader: FC<ChatImageUploaderProps> = ({
 
   return (
     <UploaderButton
-      methods={settings.transfer_methods}
+      methods={[]}
       onUpload={onUpload}
       disabled={disabled}
       limit={+settings.image_file_size_limit!}

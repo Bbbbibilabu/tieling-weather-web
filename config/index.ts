@@ -5,7 +5,7 @@ export const API_URL = `${process.env.NEXT_PUBLIC_API_URL}`
 export const APP_INFO: AppInfo = {
   title: '气象助手',
   description: '铁岭市气象业务智能助手',
-  copyright: '铁岭市气象部门',
+  copyright: '铁岭气象',
   privacy_policy: '',
   default_language: 'en-US',
   disable_session_same_site: false, // set it to true if you want to embed the chatbot in an iframe

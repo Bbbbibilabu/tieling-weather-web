@@ -3,7 +3,7 @@ export const APP_ID = `${process.env.NEXT_PUBLIC_APP_ID}`
 export const API_KEY = `${process.env.NEXT_PUBLIC_APP_KEY}`
 export const API_URL = `${process.env.NEXT_PUBLIC_API_URL}`
 export const APP_INFO: AppInfo = {
-  title: '气象助手',
+  title: '铁岭气象助手',
   description: '铁岭市气象业务智能助手',
   copyright: '铁岭气象',
   privacy_policy: '',

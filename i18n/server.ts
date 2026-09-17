@@ -10,17 +10,7 @@ export const getLocaleOnServer = async (): Promise<Locale> => {
   // @ts-expect-error locales are readonly
   const locales: string[] = i18n.locales
 
-  let languages: string[] | undefined
-  // get locale from cookie
-  const localeCookie = (await cookies()).get('locale')
-
-if (localeCookie?.value === 'zh-Hans') {
-  languages = ['zh-Hans']
-} else if (localeCookie?.value === 'en') {
-  languages = ['en']
-} else {
-  languages = []
-}
+ const languages: string[] = ['zh-Hans']
 
   if (!languages.length) {
     // Negotiator expects plain object so we need to transform headers
